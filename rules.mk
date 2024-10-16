@@ -1,3 +1,6 @@
 POINTING_DEVICE_DRIVER = analog_joystick
 SRC += lib/oled.c
 COMBO_ENABLE = yes
+RGBLIGHT_ENABLE = no
+RGB_MATRIX_ENABLE = no
+RGBLED_ENABLE = no
