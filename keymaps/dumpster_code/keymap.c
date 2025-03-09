@@ -6,9 +6,15 @@
 const uint16_t PROGMEM combo_tab[] = {KC_J, KC_K, COMBO_END};
 const uint16_t PROGMEM combo_esc[] = {KC_S, KC_D, COMBO_END};
 
+const uint16_t PROGMEM combo_space[] = {KC_8, KC_9, COMBO_END};
+const uint16_t PROGMEM combo_dot[]   = {KC_2, KC_3, COMBO_END};
+
 combo_t key_combos[] = {
     COMBO(combo_tab, KC_TAB),
     COMBO(combo_esc, KC_ESC),
+
+    COMBO(combo_space, KC_SPC),
+    COMBO(combo_dot,   KC_DOT),
 };
 
 enum custom_keycodes {
@@ -52,7 +58,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
             }
             break;
 
-        return false;   
+        return false;
     }
     return true;
 }
@@ -66,7 +72,7 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [0] = LAYOUT_split_3x6_3(
   //,-----------------------------------------------------.                    ,-----------------------------------------------------.
-       KC_GRV,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                       _SLASH,    KC_Y,    KC_U,    KC_I,    KC_O, KC_QUES,  
+       KC_GRV,    KC_Q,    KC_W,    KC_E,    KC_R,    KC_T,                       _SLASH,    KC_Y,    KC_U,    KC_I,    KC_O, KC_QUES,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
       KC_LALT,    KC_A,    KC_S,    KC_D,    KC_F,    KC_G,                      KC_SCLN,    KC_H,    KC_J,    KC_K,    KC_L, KC_QUOT,
   //|--------+--------+--------+--------+--------+--------|                    |--------+--------+--------+--------+--------+--------|
